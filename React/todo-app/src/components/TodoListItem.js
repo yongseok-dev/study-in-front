@@ -12,6 +12,8 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
   useEffect(() => {
     // console.log(id);
   });
+  /** 아래처럼 하면 안된다! ->
+   *  함수의 실행 위치 때문인지 state가 변경되지 않는 문제가 발생 */
   // const onClick = useCallback((id) => {
   //   console.log('onClick', id);
   //   console.log('onClick', onRemove);

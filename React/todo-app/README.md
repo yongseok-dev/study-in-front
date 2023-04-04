@@ -66,3 +66,18 @@
   );
   ```
   - `e.preventDefault();` 새로고침을 방지
+
+### 10.3.3
+
+- 상태를 관리하는 컴포넌트에서 함수를 생성하고 prop으로 이벤트 소스로 내려준다.
+- 이벤트 소스에서 인자를 넘기려면 `onClick={()=>{onRemove(id)}}` 익명함수로 랩핑한다.
+- 삭제
+  - `array.filter((element)=>{return bool})`를 사용해 배열을 생성한다.
+  - bool true일 때 element를 모아서 배열을 리턴
+
+### 10.3.4
+
+- 수정
+  - `array.map((element=>{return element}))`를 사용해 새로운 배열을 생성한다.
+  - return 되는 값을 모아서 배열로 리턴
+- `!bool`은 true->false, false->true, 단순한 `if`문 `삼항연산자` 활용

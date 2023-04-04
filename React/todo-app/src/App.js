@@ -36,9 +36,10 @@ function App() {
   const onToggle = useCallback(
     (id) => {
       const newTodos = todos.map((todo) => {
-        if (todo.id === id) {
-          todo.checked = !todo.checked;
-        }
+        // if (todo.id === id) {
+        //   todo.checked = !todo.checked;
+        // }
+        todo.checked = todo.id === id ? !todo.checked : todo.checked; //삼항연산자
         return todo;
       });
       setTodos(newTodos);
