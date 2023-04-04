@@ -22,10 +22,26 @@ function App() {
     },
     [todos],
   );
+  const onRemove = useCallback(
+    (id) => {
+      console.log('start', todos);
+      console.log(
+        todos.filter((todo) => {
+          return todo.id !== id;
+        }),
+      );
+      const newTodos = todos.filter((todo) => {
+        return todo.id !== id;
+      });
+      setTodos(newTodos);
+      console.log('end', todos); //setTodos로 인해서 원본 todos 업데이트가 되지 않음...
+    },
+    [todos],
+  );
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onRemove={onRemove} />
     </TodoTemplate>
   );
 }
