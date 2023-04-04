@@ -1,5 +1,7 @@
+import TodoTemplate from './components/TodoTemplate';
+
 function App() {
-  return <div className="App">Todo App을 만들기</div>;
+  return <TodoTemplate>Todo App을 만들기</TodoTemplate>;
 }
 
 export default App;
