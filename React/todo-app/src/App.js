@@ -6,7 +6,7 @@ import TodoTemplate from './components/TodoTemplate';
 function App() {
   const [todos, setTodos] = useState([
     { id: 1, text: 'react basic', checked: true },
-    { id: 2, text: 'component styling', checked: true },
+    { id: 2, text: 'component styling', checked: false },
     { id: 3, text: 'Make todo list app', checked: true },
   ]);
   return (

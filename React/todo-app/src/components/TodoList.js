@@ -8,9 +8,9 @@ const TodoList = ({ todos }) => {
   });
   return (
     <div className="TodoList">
-      <TodoListItem item={todos[0]} />
-      <TodoListItem item={todos[1]} />
-      <TodoListItem item={todos[2]} />
+      {todos.map((todo) => {
+        return <TodoListItem todo={todo} key={todo.id} />;
+      })}
     </div>
   );
 };
