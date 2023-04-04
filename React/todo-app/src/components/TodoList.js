@@ -1,13 +1,16 @@
-import React from 'react';
+import { useEffect } from 'react';
 import TodoListItem from './TodoListItem';
 import './TodoList.scss';
 
-const TodoList = () => {
+const TodoList = ({ todos }) => {
+  useEffect(() => {
+    // console.log('list', todos);
+  });
   return (
     <div className="TodoList">
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
+      <TodoListItem item={todos[0]} />
+      <TodoListItem item={todos[1]} />
+      <TodoListItem item={todos[2]} />
     </div>
   );
 };
