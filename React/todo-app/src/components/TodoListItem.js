@@ -7,23 +7,29 @@ import cn from 'classnames';
 import './TodoListItem.scss';
 import { useCallback, useEffect } from 'react';
 
-const TodoListItem = ({ todo, id, onRemove }) => {
-  const { text, checked } = todo;
+const TodoListItem = ({ todo, onRemove }) => {
+  const { id, text, checked } = todo;
   useEffect(() => {
     // console.log(id);
   });
-  const onClick = useCallback((e) => {
-    // console.log('onClick', id);
-    console.log('onClick', onRemove);
-    onRemove(id);
-  }, []);
+  // const onClick = useCallback((id) => {
+  //   console.log('onClick', id);
+  //   console.log('onClick', onRemove);
+  //   onRemove(id);
+  // }, []);
   return (
     <div className="TodoListItem">
       <div className={cn('checkbox', { checked })}>
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
       </div>
-      <div className="remove" id={id} onClick={onClick}>
+      <div
+        className="remove"
+        id={id}
+        onClick={() => {
+          onRemove(id);
+        }}
+      >
         <MdRemoveCircleOutline />
       </div>
     </div>

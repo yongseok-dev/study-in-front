@@ -24,17 +24,12 @@ function App() {
   );
   const onRemove = useCallback(
     (id) => {
-      console.log('start', todos);
-      console.log(
-        todos.filter((todo) => {
-          return todo.id !== id;
-        }),
-      );
+      // console.log('start', todos);
       const newTodos = todos.filter((todo) => {
         return todo.id !== id;
       });
       setTodos(newTodos);
-      console.log('end', todos); //setTodos로 인해서 원본 todos 업데이트가 되지 않음...
+      // console.log('end', todos); //setTodos로 원본 todos 업데이트가 되지 않음...
     },
     [todos],
   );
