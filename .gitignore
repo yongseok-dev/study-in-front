@@ -117,3 +117,5 @@ yarn-error.log*
 
 /React/react-exam/public/img/*
 /React/react-exam/src/data/*
+
+.env
