@@ -1,10 +1,19 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+// import Ex from './components/3-8.vue'
+// import Ex from './components/3-9.vue'
+// import Ex from './components/3-10.vue'
+// import Ex from './components/3-11.vue'
+import Ex from './components/3-12.vue'
 </script>
 
 <template>
-  <header>
+  <div>
+    <Ex></Ex>
+  </div>
+
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -14,7 +23,7 @@ import TheWelcome from './components/TheWelcome.vue'
 
   <main>
     <TheWelcome />
-  </main>
+  </main> -->
 </template>
 
 <style scoped>
