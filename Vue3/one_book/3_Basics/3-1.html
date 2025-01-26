@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Vue3 CDN</title>
+    <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <h1>{{msg_hello}}</h1>
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            msg_hello: "hello Vue 3 CDN",
+          };
+        },
+      };
+
+      Vue.createApp(App).mount(".app");
+    </script>
+  </body>
+</html>
