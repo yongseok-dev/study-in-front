@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구구단</title>
+    <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <p>{{num1}} 곱하기 {{num2}}는?</p>
+      <form @submit="onSubmitButton">
+        <input type="text" v-model="answer" />
+        <button type="submit">입력!</button>
+      </form>
+      <p>
+        <span>{{isCorrect==undefined?"":isCorrect?"정답":"오답"}}</span>
+      </p>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            num1: Math.ceil(Math.random() * 10),
+            num2: Math.ceil(Math.random() * 10),
+            answer: "",
+            isCorrect: undefined,
+          };
+        },
+        methods: {
+          onSubmitButton(e) {
+            e.preventDefault(); //기본 이벤트 종료(서브밋 기본동작 GET 요청 안함.)
+            console.log(this);
+
+            if (this.num1 * this.num2 == this.answer) {
+              this.isCorrect = true;
+            } else {
+              this.isCorrect = false;
+            }
+            this.num1 = Math.round(Math.random() * 10);
+            this.num2 = Math.round(Math.random() * 10);
+            this.answer = "";
+          },
+        },
+      });
+      app.mount("#root");
+    </script>
+  </body>
+</html>

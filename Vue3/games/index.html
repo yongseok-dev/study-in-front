@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>like</title>
+    <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div v-if="liked">좋아요 눌렀음</div>
+      <button v-else v-on:click="onClickButton">like</button>
+    </div>
+  </body>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          liked: false,
+        };
+      },
+      methods: {
+        onClickButton() {
+          this.liked = true;
+        },
+      },
+    });
+    app.mount("#root");
+  </script>
+</html>
