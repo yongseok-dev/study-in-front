@@ -44,7 +44,27 @@
 - `updated()`: 반응형 데이터가 변경되어 DOM이 업데이트됩니다.
 - `destroyed()`: 컴포넌트가 DOM에서 제거되고, 리소스가 정리됩니다.
 
-## ch6.
+## ch6. 로또 생성기
+
+```
+// 지연을 생성하는 함수
+    delay(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    },
+```
+
+- `props` 받기
+
+```
+  props: {
+    number: {
+      type: Number,
+      required: true,
+    },
+  },
+```
+
+- `watch`: 데이터의 변화 발생시 실행(계속 바라보고 값의 변경을 추적),안쓰는 것이 좋음
 
 ## ch7.
 
