@@ -8,9 +8,10 @@
   </head>
   <body>
     <div id="root">
-      <word-relay></word-relay>
-      <word-relay></word-relay>
-      <word-relay></word-relay>
+      <word-relay start-word="김밥"></word-relay>
+      <word-relay start-word="밥김굿"></word-relay>
+      <word-relay start-word="반응형"></word-relay>
+      <!-- props template 케밥케이스로 쓰고, js 카멜케이스 -->
     </div>
   </body>
   <script>
@@ -26,9 +27,10 @@
         <h4>{{result}}</h4>
       </div>
       `,
+      props: ["startWord"],
       data() {
         return {
-          word: "",
+          word: this.startWord,
           answer: "",
           result: "",
         };
