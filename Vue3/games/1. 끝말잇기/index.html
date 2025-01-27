@@ -8,17 +8,24 @@
   </head>
   <body>
     <div id="root">
-      <h1>끝말잇기</h1>
-      <h3>{{word}}</h3>
-      <form @submit="onsubmitEvent">
-        <input type="text" ref="answer" v-model="answer" />
-        <button type="submit">제출</button>
-      </form>
-      <h4>{{result}}</h4>
+      <word-relay></word-relay>
+      <word-relay></word-relay>
+      <word-relay></word-relay>
     </div>
   </body>
   <script>
-    const app = Vue.createApp({
+    const WordRelay = {
+      template: `
+      <div>
+        <h1>끝말잇기</h1>
+        <h3>{{word}}</h3>
+        <form @submit="onsubmitEvent">
+          <input type="text" ref="answer" v-model="answer" />
+          <button type="submit">제출</button>
+        </form>
+        <h4>{{result}}</h4>
+      </div>
+      `,
       data() {
         return {
           word: "",
@@ -42,7 +49,14 @@
           this.$refs.answer.focus();
         },
       },
+    };
+  </script>
+  <script>
+    const app = Vue.createApp({
+      data() {},
+      methods: {},
     });
+    app.component("word-relay", WordRelay);
     app.mount("#root");
   </script>
 </html>
