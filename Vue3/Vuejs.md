@@ -66,7 +66,11 @@
 
 - `watch`: 데이터의 변화 발생시 실행(계속 바라보고 값의 변경을 추적),안쓰는 것이 좋음
 
-## ch7.
+## ch7. 틱택토
+
+- vue2에서 배열의 인덱스로 접근하여 값을 변경한 것, Object key 추가를 데이터 변화로 인식하지 못한다.
+  - `Vue.set(target, propertyName/index, value)`, `this.$set(target, propertyName/index, value)`사용
+- vue3에서는 해당부분 해결되었고, `this.$set` 메서드가 더 이상 존재하지 않는다.
 
 ## ch8.
 
