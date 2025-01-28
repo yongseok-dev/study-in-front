@@ -44,7 +44,7 @@ export default {
           this.check(2, 0, 2, 2) ||
           this.check(0, 0, 2, 0) ||
           this.check(0, 1, 2, 1) ||
-          this.check(2, 0, 2, 2) ||
+          this.check(0, 2, 2, 2) ||
           this.check(0, 0, 2, 2) ||
           this.check(0, 2, 2, 0)
         ) {
